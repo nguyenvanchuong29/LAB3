@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int min(int a, int b) {
+    return (a < b) ? a : b;
+}
+
+int min(int a, int b, int c) {
+    return min(min(a, b), c);
+}
+
+int main() {
+    int n1, n2, n3, n4, n5;
+
+    cout << "Nhap so thu nhat va thu hai: ";
+    cin >> n1 >> n2;
+    int mina = min(n1, n2);
+    cout << "So nho hon trong hai so la: " << mina << endl;
+
+    cout << "Nhap so thu nhat, thu hai va thu ba: ";
+    cin >> n3 >> n4 >> n5;
+    int minb = min(n3, n4, n5);
+    cout << "So nho hon trong ba so la: " << minb << endl;
+
+    return 0;
+}
